@@ -1,0 +1,23 @@
+Google Fit
+Argus
+Strava
+Nike Run Club
+Walk with Map My Walk
+7 Minute Workout
+FitOn
+Home Workout — No Equipment
+My Fitness Pal
+FatSecret
+
+
+MyFitnessPal: MyFitnessPal is a widely used fitness app that focuses on nutrition and calorie tracking. It allows users to log their meals, track their calorie intake, set fitness goals, and monitor their progress.
+
+Nike Training Club: Nike Training Club provides a wide range of workout routines and training plans designed by professional trainers. The app offers various fitness levels, durations, and specific goals such as strength, endurance, or weight loss.
+
+Strava: Strava is a popular app among runners and cyclists. It tracks and records activities using GPS, provides detailed stats, and allows users to compete with friends or participate in challenges. It also offers features for route planning and analysis.
+
+Fitbit: Fitbit is known for its wearable devices but also offers a comprehensive app. It tracks activity levels, sleep patterns, heart rate, and offers guided workouts. It also provides insights into overall health and offers goal-setting features.
+
+Seven - 7 Minute Workout: Seven is an app that focuses on quick and efficient workouts. It provides science-based workout routines that can be completed in just seven minutes. It's suitable for users with busy schedules or those looking for short, effective workouts.
+
+StrongLifts 5x5: StrongLifts 5x5 is a weightlifting app that focuses on the popular 5x5 strength training program. It guides users through the workouts, tracks progress, and helps users increase their strength over time.

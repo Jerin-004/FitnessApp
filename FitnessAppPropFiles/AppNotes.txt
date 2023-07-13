@@ -1,0 +1,18 @@
+SRS - software requirements specification
+
+1) Date auto choose (no edit)
+2) Which body part -> Arms,Chest,Leg (use images)
+3) Choose equipment -> Subtype (use images)
+4) Weight , Reps
+   [  ]     [   ]
+   add(button)
+5) Progress graph
+(line graph)
+
+Use firebase for database
+
+TODO:
+-> Make a flow chart
+
+
+
