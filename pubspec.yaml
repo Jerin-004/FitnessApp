@@ -74,6 +74,10 @@ flutter:
     - assets/images/q10.png
     - assets/images/q11.png
     - assets/images/q12.png
+    - assets/images/q13.png
+    - assets/images/q14.png
+    - assets/images/q16.png
+    - assets/images/q18.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

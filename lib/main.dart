@@ -23,6 +23,10 @@ var q9 = "assets/images/q9.png";
 var q10 = "assets/images/q10.png";
 var q11 = "assets/images/q11.png";
 var q12 = "assets/images/q12.png";
+var q13 = "assets/images/q13.png";
+var q14 = "assets/images/q14.png";
+var q16 = "assets/images/q16.png";
+var q18 = "assets/images/q18.png";
 
 // body parts
 double value1 = 0.0;
@@ -477,6 +481,134 @@ class _WorkoutPageState extends State<WorkoutPage> {
                           ),
                         ),
                       ]
+                      else if (value2 == 1.0) ... [
+                        GestureDetector(
+                          onTap: (){
+                            setState((){
+                              valueEquip1 = 1.0;
+                              valueEquip2 = 0.0;
+                              valueEquip3 = 0.0;
+                              valueEquip4 = 0.0;
+
+                            });
+                          },
+                          child:  Padding(
+                            padding: const EdgeInsets.only(top:50.0),
+                            child: SizedBox(
+                              width: 190,
+                              height: 190,
+                              child: Container(
+                                padding: EdgeInsets.all(2), // Border width
+                                decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip1), borderRadius: BorderRadius.circular(20)),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(20), // Image border
+                                  child: SizedBox.fromSize(
+                                    size: const Size.fromRadius(48), // Image radius
+                                    child: Image.asset(
+                                      q13,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: (){
+                            setState((){
+                              valueEquip1 = 0.0;
+                              valueEquip2 = 1.0;
+                              valueEquip3 = 0.0;
+                              valueEquip4 = 0.0;
+                            });
+                          },
+                          child:  Padding(
+                            padding: const EdgeInsets.only(top:50.0),
+                            child: SizedBox(
+                              width: 190,
+                              height: 190,
+                              child: Container(
+                                padding: EdgeInsets.all(2), // Border width
+                                decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip2), borderRadius: BorderRadius.circular(20)),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(20), // Image border
+                                  child: SizedBox.fromSize(
+                                    size: const Size.fromRadius(48), // Image radius
+                                    child: Image.asset(
+                                      q14,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: (){
+                            setState((){
+                              valueEquip1 = 0.0;
+                              valueEquip2 = 0.0;
+                              valueEquip3 = 1.0;
+                              valueEquip4 = 0.0;
+                            });
+                          },
+                          child:  Padding(
+                            padding: const EdgeInsets.only(top:50.0),
+                            child: SizedBox(
+                              width: 190,
+                              height: 190,
+                              child: Container(
+                                padding: EdgeInsets.all(2), // Border width
+                                decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip3), borderRadius: BorderRadius.circular(20)),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(20), // Image border
+                                  child: SizedBox.fromSize(
+                                    size: const Size.fromRadius(48), // Image radius
+                                    child: Image.asset(
+                                      q16,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: (){
+                            setState((){
+                              valueEquip1 = 0.0;
+                              valueEquip2 = 0.0;
+                              valueEquip3 = 0.0;
+                              valueEquip4 = 1.0;
+                            });
+                          },
+                          child:  Padding(
+                            padding: const EdgeInsets.only(top:50.0),
+                            child: SizedBox(
+                              width: 190,
+                              height: 190,
+                              child: Container(
+                                padding: EdgeInsets.all(2), // Border width
+                                decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip4), borderRadius: BorderRadius.circular(20)),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(20), // Image border
+                                  child: SizedBox.fromSize(
+                                    size: const Size.fromRadius(48), // Image radius
+                                    child: Image.asset(
+                                      q18,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ]
+
 
 
                     ],
