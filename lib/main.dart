@@ -27,6 +27,14 @@ var q13 = "assets/images/q13.png";
 var q14 = "assets/images/q14.png";
 var q16 = "assets/images/q16.png";
 var q18 = "assets/images/q18.png";
+var q21 = "assets/images/q21.png";
+var q23 = "assets/images/q23.png";
+var q24 = "assets/images/q24.png";
+var q25 = "assets/images/q25.png";
+var q26 = "assets/images/q26.png";
+var q29 = "assets/images/q29.png";
+var q30 = "assets/images/q30.png";
+var q31 = "assets/images/q31.png";
 
 // body parts
 double value1 = 0.0;
@@ -43,10 +51,15 @@ double valueEquip4 = 0.0;
 var workoutMainText = "Body Part";
 var _isVisibleBodyPart = true;
 var _isVisibleEquipment = false;
+var _isVisibleWeight = false;
 var _isVisibleNextBtn1 = true;
 var _isVisibleNextBtn2 = false;
 var _isVisibleNextBtn3 = false;
-var _isVisibleNextBtn4 = false;
+var _isVisibleWeightRepsText = true;
+var _isVisibleRepsText = false;
+
+
+
 
 
 
@@ -133,9 +146,15 @@ class _MyHomePageState extends State<MyHomePage> {
             backgroundColor: BG,
             child: const Icon(Icons.fitness_center),
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return const WorkoutPage();
-              }));
+              setState(() {
+                _isVisibleBodyPart = true;
+                _isVisibleNextBtn1 = true;
+                workoutMainText = "Body Part";
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const WorkoutPage();
+                }));
+              });
+
             },
           ),
           FloatingActionButton.small(
@@ -352,6 +371,7 @@ class _WorkoutPageState extends State<WorkoutPage> {
                     borderRadius: const BorderRadius.vertical(top: Radius.circular(30))
                 ),
                 child: SingleChildScrollView(
+
                   child: Column(
                     children: [
                       if (value1 == 1.0) ... [
@@ -464,7 +484,7 @@ class _WorkoutPageState extends State<WorkoutPage> {
                               width: 190,
                               height: 190,
                               child: Container(
-                                padding: EdgeInsets.all(2), // Border width
+                                padding: const EdgeInsets.all(2), // Border width
                                 decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip4), borderRadius: BorderRadius.circular(20)),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(20), // Image border
@@ -608,11 +628,364 @@ class _WorkoutPageState extends State<WorkoutPage> {
                           ),
                         ),
                       ]
+                      else if (value3 == 1.0) ... [
+                        GestureDetector(
+                            onTap: (){
+                              setState((){
+                                valueEquip1 = 1.0;
+                                valueEquip2 = 0.0;
+                                valueEquip3 = 0.0;
+                                valueEquip4 = 0.0;
+
+                              });
+                            },
+                            child:  Padding(
+                              padding: const EdgeInsets.only(top:50.0),
+                              child: SizedBox(
+                                width: 190,
+                                height: 190,
+                                child: Container(
+                                  padding: EdgeInsets.all(2), // Border width
+                                  decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip1), borderRadius: BorderRadius.circular(20)),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20), // Image border
+                                    child: SizedBox.fromSize(
+                                      size: const Size.fromRadius(48), // Image radius
+                                      child: Image.asset(
+                                        q21,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        GestureDetector(
+                            onTap: (){
+                              setState((){
+                                valueEquip1 = 0.0;
+                                valueEquip2 = 1.0;
+                                valueEquip3 = 0.0;
+                                valueEquip4 = 0.0;
+                              });
+                            },
+                            child:  Padding(
+                              padding: const EdgeInsets.only(top:50.0),
+                              child: SizedBox(
+                                width: 190,
+                                height: 190,
+                                child: Container(
+                                  padding: EdgeInsets.all(2), // Border width
+                                  decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip2), borderRadius: BorderRadius.circular(20)),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20), // Image border
+                                    child: SizedBox.fromSize(
+                                      size: const Size.fromRadius(48), // Image radius
+                                      child: Image.asset(
+                                        q23,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        GestureDetector(
+                            onTap: (){
+                              setState((){
+                                valueEquip1 = 0.0;
+                                valueEquip2 = 0.0;
+                                valueEquip3 = 1.0;
+                                valueEquip4 = 0.0;
+                              });
+                            },
+                            child:  Padding(
+                              padding: const EdgeInsets.only(top:50.0),
+                              child: SizedBox(
+                                width: 190,
+                                height: 190,
+                                child: Container(
+                                  padding: EdgeInsets.all(2), // Border width
+                                  decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip3), borderRadius: BorderRadius.circular(20)),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20), // Image border
+                                    child: SizedBox.fromSize(
+                                      size: const Size.fromRadius(48), // Image radius
+                                      child: Image.asset(
+                                        q24,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        GestureDetector(
+                            onTap: (){
+                              setState((){
+                                valueEquip1 = 0.0;
+                                valueEquip2 = 0.0;
+                                valueEquip3 = 0.0;
+                                valueEquip4 = 1.0;
+                              });
+                            },
+                            child:  Padding(
+                              padding: const EdgeInsets.only(top:50.0),
+                              child: SizedBox(
+                                width: 190,
+                                height: 190,
+                                child: Container(
+                                  padding: EdgeInsets.all(2), // Border width
+                                  decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip4), borderRadius: BorderRadius.circular(20)),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20), // Image border
+                                    child: SizedBox.fromSize(
+                                      size: const Size.fromRadius(48), // Image radius
+                                      child: Image.asset(
+                                        q25,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                      ]
+                      else if (value4 == 1.0) ... [
+                        GestureDetector(
+                              onTap: (){
+                                setState((){
+                                  valueEquip1 = 1.0;
+                                  valueEquip2 = 0.0;
+                                  valueEquip3 = 0.0;
+                                  valueEquip4 = 0.0;
+
+                                });
+                              },
+                              child:  Padding(
+                                padding: const EdgeInsets.only(top:50.0),
+                                child: SizedBox(
+                                  width: 190,
+                                  height: 190,
+                                  child: Container(
+                                    padding: EdgeInsets.all(2), // Border width
+                                    decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip1), borderRadius: BorderRadius.circular(20)),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(20), // Image border
+                                      child: SizedBox.fromSize(
+                                        size: const Size.fromRadius(48), // Image radius
+                                        child: Image.asset(
+                                          q26,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                        GestureDetector(
+                              onTap: (){
+                                setState((){
+                                  valueEquip1 = 0.0;
+                                  valueEquip2 = 1.0;
+                                  valueEquip3 = 0.0;
+                                  valueEquip4 = 0.0;
+                                });
+                              },
+                              child:  Padding(
+                                padding: const EdgeInsets.only(top:50.0),
+                                child: SizedBox(
+                                  width: 190,
+                                  height: 190,
+                                  child: Container(
+                                    padding: EdgeInsets.all(2), // Border width
+                                    decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip2), borderRadius: BorderRadius.circular(20)),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(20), // Image border
+                                      child: SizedBox.fromSize(
+                                        size: const Size.fromRadius(48), // Image radius
+                                        child: Image.asset(
+                                          q29,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                        GestureDetector(
+                              onTap: (){
+                                setState((){
+                                  valueEquip1 = 0.0;
+                                  valueEquip2 = 0.0;
+                                  valueEquip3 = 1.0;
+                                  valueEquip4 = 0.0;
+                                });
+                              },
+                              child:  Padding(
+                                padding: const EdgeInsets.only(top:50.0),
+                                child: SizedBox(
+                                  width: 190,
+                                  height: 190,
+                                  child: Container(
+                                    padding: EdgeInsets.all(2), // Border width
+                                    decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip3), borderRadius: BorderRadius.circular(20)),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(20), // Image border
+                                      child: SizedBox.fromSize(
+                                        size: const Size.fromRadius(48), // Image radius
+                                        child: Image.asset(
+                                          q30,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                        GestureDetector(
+                              onTap: (){
+                                setState((){
+                                  valueEquip1 = 0.0;
+                                  valueEquip2 = 0.0;
+                                  valueEquip3 = 0.0;
+                                  valueEquip4 = 1.0;
+                                });
+                              },
+                              child:  Padding(
+                                padding: const EdgeInsets.only(top:50.0),
+                                child: SizedBox(
+                                  width: 190,
+                                  height: 190,
+                                  child: Container(
+                                    padding: EdgeInsets.all(2), // Border width
+                                    decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip4), borderRadius: BorderRadius.circular(20)),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(20), // Image border
+                                      child: SizedBox.fromSize(
+                                        size: const Size.fromRadius(48), // Image radius
+                                        child: Image.asset(
+                                          q31,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                      ]
 
 
 
                     ],
                   ),
+                ),
+              ),
+            ),
+          ),
+          Visibility(
+            visible: _isVisibleWeight,
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                width: double.infinity,
+                height: 400,
+                decoration: BoxDecoration(
+                    color: B.withOpacity(0.5),
+                    borderRadius: const BorderRadius.vertical(top: Radius.circular(30))
+                ),
+                child: Row(
+                  children: [
+                    Visibility(
+                      visible: _isVisibleWeightRepsText,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 51.0),
+                        child: Container(
+                          width: 120,
+                            child: TextField(
+                              textAlign: TextAlign.center,
+                              cursorColor: BG,
+                              style:  TextStyle(
+                                  color: BG,
+                                  fontWeight: FontWeight.bold,
+                                  ),
+                              decoration: InputDecoration(
+                                filled: true,
+                                fillColor: B,
+                                hintStyle: TextStyle(color: BG),
+                                hintText: "Weight(Kg)",
+                                border: OutlineInputBorder(
+                                    borderSide: BorderSide.none,
+                                    borderRadius: BorderRadius.circular(10)
+                                ),
+                              ),
+                            )
+                        ),
+                      ),
+                    ),
+                    Visibility(
+                      visible: _isVisibleWeightRepsText,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 47.0),
+                        child: Container(
+                          width: 120,
+                            child: TextField(
+                              textAlign: TextAlign.center,
+                              cursorColor: BG,
+                              style:  TextStyle(
+                                  color: BG,
+                                  fontWeight: FontWeight.bold,
+                                  ),
+                              decoration: InputDecoration(
+                                filled: true,
+                                fillColor: B,
+                                hintStyle: TextStyle(color: BG),
+                                hintText: "Reps",
+                                border: OutlineInputBorder(
+                                    borderSide: BorderSide.none,
+                                    borderRadius: BorderRadius.circular(10)
+                                ),
+                              ),
+                            )
+                        ),
+                      ),
+                    ),
+                    Visibility(
+                      visible: _isVisibleRepsText,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 120.0),
+                        child: Container(
+                          width: 130,
+                            child: TextField(
+                              textAlign: TextAlign.center,
+                              cursorColor: BG,
+                              style:  TextStyle(
+                                  color: BG,
+                                  fontWeight: FontWeight.bold,
+                                  ),
+                              decoration: InputDecoration(
+                                filled: true,
+                                fillColor: B,
+                                hintStyle: TextStyle(color: BG),
+                                hintText: "Reps",
+                                border: OutlineInputBorder(
+                                    borderSide: BorderSide.none,
+                                    borderRadius: BorderRadius.circular(10)
+                                ),
+                              ),
+                            )
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -659,11 +1032,14 @@ class _WorkoutPageState extends State<WorkoutPage> {
                   child: IconButton(
                     onPressed: () {
                       setState(() {
-                        _isVisibleNextBtn2 = true;
-                        _isVisibleBodyPart = false;
-                        _isVisibleEquipment = true;
-                        workoutMainText = "Equipment";
-                        _isVisibleNextBtn1 = false;
+                        if (value1 == 1.0 || value2 == 1.0 || value3 == 1.0 || value4 == 1.0) {
+                          _isVisibleNextBtn2 = true;
+                          _isVisibleBodyPart = false;
+                          _isVisibleEquipment = true;
+                          workoutMainText = "Equipment";
+                          _isVisibleNextBtn1 = false;
+                        }
+
                       });
                     },
                     icon: Icon(
@@ -691,11 +1067,61 @@ class _WorkoutPageState extends State<WorkoutPage> {
                   child: IconButton(
                     onPressed: () {
                       setState(() {
-                        _isVisibleBodyPart = false;
-                        _isVisibleEquipment = false;
-                        workoutMainText = "Weight";
-                        _isVisibleNextBtn2 = false;
-                        _isVisibleNextBtn3 = true;
+
+                        if (value1 == 1) {
+                          if (valueEquip1 == 1) {
+                            _isVisibleWeightRepsText = false;
+                            _isVisibleRepsText = true;
+                          }
+                        }
+                        if (valueEquip1 == 1 || valueEquip2 == 1 || valueEquip3 == 1 || valueEquip4 == 1) {
+                          workoutMainText = "Weight & Reps";
+                          _isVisibleNextBtn3 = true;
+                          _isVisibleNextBtn2 = false;
+                          _isVisibleBodyPart = false;
+                          _isVisibleEquipment = false;
+                          _isVisibleWeight = true;
+                        }
+
+                      });
+                    },
+                    icon: Icon(
+                      Icons.arrow_right_alt_rounded,
+                      color: B,
+                      size: 40,
+                    ),
+
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Visibility(
+            visible: _isVisibleNextBtn3,
+            child: Padding(
+              padding:  const EdgeInsets.only(bottom: 15.0,left: 15.0),
+              child: Align(
+                alignment: Alignment.bottomLeft,
+                child: Container(
+                  decoration: BoxDecoration(
+                      borderRadius: const BorderRadius.all(Radius.circular(30)),
+                      color: BG,
+                  ),
+                  child: IconButton(
+                    onPressed: () {
+                      setState(() {
+                        if (valueEquip1 == 1 || valueEquip2 == 1 || valueEquip3 == 1 || valueEquip4 == 1) {
+                          _isVisibleNextBtn2 = false;
+                          _isVisibleNextBtn3 = false;
+                          _isVisibleEquipment = false;
+                          _isVisibleBodyPart = false;
+                          _isVisibleWeight = false;
+                          Navigator.push(context, MaterialPageRoute(builder: (context) {
+                            return const MyHomePage(title: 'Home',);
+                          }));
+                        }
+
+
                       });
                     },
                     icon: Icon(
@@ -737,9 +1163,14 @@ class _WorkoutPageState extends State<WorkoutPage> {
             backgroundColor: BG,
             child: const Icon(Icons.home),
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return const MyHomePage(title: 'Home',);
-              }));
+              setState(() {
+                if (_isVisibleEquipment == false && _isVisibleWeight == false) {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const MyHomePage(title: 'Home',);
+                  }));
+                }
+
+              });
             },
           ),
           FloatingActionButton.small(
