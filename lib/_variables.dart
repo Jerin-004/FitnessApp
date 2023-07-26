@@ -30,6 +30,17 @@ var q26 = "assets/images/q26.png";
 var q29 = "assets/images/q29.png";
 var q30 = "assets/images/q30.png";
 var q31 = "assets/images/q31.png";
+var q32 = "assets/images/q32.png";
+var q33 = "assets/images/q33.png";
+var q34 = "assets/images/q34.png";
+var q35 = "assets/images/q35.png";
+var q36 = "assets/images/q36.png";
+var q37 = "assets/images/q37.png";
+var q38 = "assets/images/q38.png";
+var q39 = "assets/images/q39.png";
+var q40 = "assets/images/q40.png";
+var q42 = "assets/images/q42.png";
+var q43 = "assets/images/q43.png";
 
 // body parts
 double value1 = 0.0;
@@ -40,6 +51,16 @@ double valueEquip1 = 0.0;
 double valueEquip2 = 0.0;
 double valueEquip3 = 0.0;
 double valueEquip4 = 0.0;
+double valueEquip5 = 0.0;
+double valueEquip6 = 0.0;
+double valueEquip7 = 0.0;
+double valueEquip8 = 0.0;
+double valueEquip9 = 0.0;
+double valueEquip10 = 0.0;
+double valueEquip11 = 0.0;
+double valueEquip12 = 0.0;
+double valueEquip13 = 0.0;
+double valueEquip14 = 0.0;
 
 //TextFieldValues
 int weightValue = 0;
@@ -51,3 +72,7 @@ int onlyRepsValue = 0;
 var workoutMainText = "Body Part";
 var homeIcon = Icons.arrow_left_sharp;
 var trigger = false;
+int timestamp = 0;
+String nowDate = "";
+
+

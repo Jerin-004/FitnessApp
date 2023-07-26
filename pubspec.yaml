@@ -39,6 +39,7 @@ dependencies:
   fluttertoast: ^8.2.2
   motion_toast: ^2.7.8
   sqflite: ^2.2.8+4
+  path: ^1.8.3
 
 dev_dependencies:
   flutter_test:
@@ -89,6 +90,17 @@ flutter:
     - assets/images/q29.png
     - assets/images/q30.png
     - assets/images/q31.png
+    - assets/images/q32.png
+    - assets/images/q33.png
+    - assets/images/q34.png
+    - assets/images/q35.png
+    - assets/images/q36.png
+    - assets/images/q37.png
+    - assets/images/q38.png
+    - assets/images/q39.png
+    - assets/images/q40.png
+    - assets/images/q42.png
+    - assets/images/q43.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

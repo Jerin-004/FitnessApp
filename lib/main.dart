@@ -340,6 +340,14 @@ class _WorkoutPageState extends State<WorkoutPage> {
                                 valueEquip2 = 0.0;
                                 valueEquip3 = 0.0;
                                 valueEquip4 = 0.0;
+                                valueEquip5 = 0.0;
+                                valueEquip6 = 0.0;
+                                valueEquip7 = 0.0;
+                                valueEquip8 = 0.0;
+                                valueEquip9 = 0.0;
+                                valueEquip10 = 0.0;
+                                valueEquip11 = 0.0;
+                                valueEquip12 = 0.0;
 
                               });
                             },
@@ -372,6 +380,14 @@ class _WorkoutPageState extends State<WorkoutPage> {
                                 valueEquip2 = 1.0;
                                 valueEquip3 = 0.0;
                                 valueEquip4 = 0.0;
+                                valueEquip5 = 0.0;
+                                valueEquip6 = 0.0;
+                                valueEquip7 = 0.0;
+                                valueEquip8 = 0.0;
+                                valueEquip9 = 0.0;
+                                valueEquip10 = 0.0;
+                                valueEquip11 = 0.0;
+                                valueEquip12 = 0.0;
                               });
                             },
                             child:  Padding(
@@ -403,6 +419,14 @@ class _WorkoutPageState extends State<WorkoutPage> {
                                 valueEquip2 = 0.0;
                                 valueEquip3 = 1.0;
                                 valueEquip4 = 0.0;
+                                valueEquip5 = 0.0;
+                                valueEquip6 = 0.0;
+                                valueEquip7 = 0.0;
+                                valueEquip8 = 0.0;
+                                valueEquip9 = 0.0;
+                                valueEquip10 = 0.0;
+                                valueEquip11 = 0.0;
+                                valueEquip12 = 0.0;
                               });
                             },
                             child:  Padding(
@@ -434,6 +458,14 @@ class _WorkoutPageState extends State<WorkoutPage> {
                                 valueEquip2 = 0.0;
                                 valueEquip3 = 0.0;
                                 valueEquip4 = 1.0;
+                                valueEquip5 = 0.0;
+                                valueEquip6 = 0.0;
+                                valueEquip7 = 0.0;
+                                valueEquip8 = 0.0;
+                                valueEquip9 = 0.0;
+                                valueEquip10 = 0.0;
+                                valueEquip11 = 0.0;
+                                valueEquip12 = 0.0;
                               });
                             },
                             child:  Padding(
@@ -458,6 +490,319 @@ class _WorkoutPageState extends State<WorkoutPage> {
                               ),
                             ),
                           ),
+                          GestureDetector(
+                            onTap: (){
+                              setState((){
+                                valueEquip1 = 0.0;
+                                valueEquip2 = 0.0;
+                                valueEquip3 = 0.0;
+                                valueEquip4 = 0.0;
+                                valueEquip5 = 1.0;
+                                valueEquip6 = 0.0;
+                                valueEquip7 = 0.0;
+                                valueEquip8 = 0.0;
+                                valueEquip9 = 0.0;
+                                valueEquip10 = 0.0;
+                                valueEquip11 = 0.0;
+                                valueEquip12 = 0.0;
+                              });
+                            },
+                            child:  Padding(
+                              padding: const EdgeInsets.only(top:50.0),
+                              child: SizedBox(
+                                width: 190,
+                                height: 190,
+                                child: Container(
+                                  padding: const EdgeInsets.all(2), // Border width
+                                  decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip5), borderRadius: BorderRadius.circular(20)),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20), // Image border
+                                    child: SizedBox.fromSize(
+                                      size: const Size.fromRadius(48), // Image radius
+                                      child: Image.asset(
+                                        q32,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: (){
+                              setState((){
+                                valueEquip1 = 0.0;
+                                valueEquip2 = 0.0;
+                                valueEquip3 = 0.0;
+                                valueEquip4 = 0.0;
+                                valueEquip5 = 0.0;
+                                valueEquip6 = 1.0;
+                                valueEquip7 = 0.0;
+                                valueEquip8 = 0.0;
+                                valueEquip9 = 0.0;
+                                valueEquip10 = 0.0;
+                                valueEquip11 = 0.0;
+                                valueEquip12 = 0.0;
+                              });
+                            },
+                            child:  Padding(
+                              padding: const EdgeInsets.only(top:50.0),
+                              child: SizedBox(
+                                width: 190,
+                                height: 190,
+                                child: Container(
+                                  padding: const EdgeInsets.all(2), // Border width
+                                  decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip6), borderRadius: BorderRadius.circular(20)),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20), // Image border
+                                    child: SizedBox.fromSize(
+                                      size: const Size.fromRadius(48), // Image radius
+                                      child: Image.asset(
+                                        q33,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: (){
+                              setState((){
+                                valueEquip1 = 0.0;
+                                valueEquip2 = 0.0;
+                                valueEquip3 = 0.0;
+                                valueEquip4 = 0.0;
+                                valueEquip5 = 0.0;
+                                valueEquip6 = 0.0;
+                                valueEquip7 = 1.0;
+                                valueEquip8 = 0.0;
+                                valueEquip9 = 0.0;
+                                valueEquip10 = 0.0;
+                                valueEquip11 = 0.0;
+                                valueEquip12 = 0.0;
+                              });
+                            },
+                            child:  Padding(
+                              padding: const EdgeInsets.only(top:50.0),
+                              child: SizedBox(
+                                width: 190,
+                                height: 190,
+                                child: Container(
+                                  padding: const EdgeInsets.all(2), // Border width
+                                  decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip7), borderRadius: BorderRadius.circular(20)),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20), // Image border
+                                    child: SizedBox.fromSize(
+                                      size: const Size.fromRadius(48), // Image radius
+                                      child: Image.asset(
+                                        q34,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: (){
+                              setState((){
+                                valueEquip1 = 0.0;
+                                valueEquip2 = 0.0;
+                                valueEquip3 = 0.0;
+                                valueEquip4 = 0.0;
+                                valueEquip5 = 0.0;
+                                valueEquip6 = 0.0;
+                                valueEquip7 = 0.0;
+                                valueEquip8 = 1.0;
+                                valueEquip9 = 0.0;
+                                valueEquip10 = 0.0;
+                                valueEquip11 = 0.0;
+                                valueEquip12 = 0.0;
+                              });
+                            },
+                            child:  Padding(
+                              padding: const EdgeInsets.only(top:50.0),
+                              child: SizedBox(
+                                width: 190,
+                                height: 190,
+                                child: Container(
+                                  padding: const EdgeInsets.all(2), // Border width
+                                  decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip8), borderRadius: BorderRadius.circular(20)),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20), // Image border
+                                    child: SizedBox.fromSize(
+                                      size: const Size.fromRadius(48), // Image radius
+                                      child: Image.asset(
+                                        q35,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: (){
+                              setState((){
+                                valueEquip1 = 0.0;
+                                valueEquip2 = 0.0;
+                                valueEquip3 = 0.0;
+                                valueEquip4 = 0.0;
+                                valueEquip5 = 0.0;
+                                valueEquip6 = 0.0;
+                                valueEquip7 = 0.0;
+                                valueEquip8 = 0.0;
+                                valueEquip9 = 1.0;
+                                valueEquip10 = 0.0;
+                                valueEquip11 = 0.0;
+                                valueEquip12 = 0.0;
+                              });
+                            },
+                            child:  Padding(
+                              padding: const EdgeInsets.only(top:50.0),
+                              child: SizedBox(
+                                width: 190,
+                                height: 190,
+                                child: Container(
+                                  padding: const EdgeInsets.all(2), // Border width
+                                  decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip9), borderRadius: BorderRadius.circular(20)),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20), // Image border
+                                    child: SizedBox.fromSize(
+                                      size: const Size.fromRadius(48), // Image radius
+                                      child: Image.asset(
+                                        q36,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: (){
+                              setState((){
+                                valueEquip1 = 0.0;
+                                valueEquip2 = 0.0;
+                                valueEquip3 = 0.0;
+                                valueEquip4 = 0.0;
+                                valueEquip5 = 0.0;
+                                valueEquip6 = 0.0;
+                                valueEquip7 = 0.0;
+                                valueEquip8 = 0.0;
+                                valueEquip9 = 0.0;
+                                valueEquip10 = 1.0;
+                                valueEquip11 = 0.0;
+                                valueEquip12 = 0.0;
+                              });
+                            },
+                            child:  Padding(
+                              padding: const EdgeInsets.only(top:50.0),
+                              child: SizedBox(
+                                width: 190,
+                                height: 190,
+                                child: Container(
+                                  padding: const EdgeInsets.all(2), // Border width
+                                  decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip10), borderRadius: BorderRadius.circular(20)),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20), // Image border
+                                    child: SizedBox.fromSize(
+                                      size: const Size.fromRadius(48), // Image radius
+                                      child: Image.asset(
+                                        q37,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: (){
+                              setState((){
+                                valueEquip1 = 0.0;
+                                valueEquip2 = 0.0;
+                                valueEquip3 = 0.0;
+                                valueEquip4 = 0.0;
+                                valueEquip5 = 0.0;
+                                valueEquip6 = 0.0;
+                                valueEquip7 = 0.0;
+                                valueEquip8 = 0.0;
+                                valueEquip9 = 0.0;
+                                valueEquip10 = 0.0;
+                                valueEquip11 = 1.0;
+                                valueEquip12 = 0.0;
+
+                              });
+                            },
+                            child:  Padding(
+                              padding: const EdgeInsets.only(top:50.0),
+                              child: SizedBox(
+                                width: 190,
+                                height: 190,
+                                child: Container(
+                                  padding: const EdgeInsets.all(2), // Border width
+                                  decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip11), borderRadius: BorderRadius.circular(20)),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20), // Image border
+                                    child: SizedBox.fromSize(
+                                      size: const Size.fromRadius(48), // Image radius
+                                      child: Image.asset(
+                                        q13,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: (){
+                              setState((){
+                                valueEquip1 = 0.0;
+                                valueEquip2 = 0.0;
+                                valueEquip3 = 0.0;
+                                valueEquip4 = 0.0;
+                                valueEquip5 = 0.0;
+                                valueEquip6 = 0.0;
+                                valueEquip7 = 0.0;
+                                valueEquip8 = 0.0;
+                                valueEquip9 = 0.0;
+                                valueEquip10 = 0.0;
+                                valueEquip11 = 0.0;
+                                valueEquip12 = 1.0;
+                              });
+                            },
+                            child:  Padding(
+                              padding: const EdgeInsets.only(top:50.0),
+                              child: SizedBox(
+                                width: 190,
+                                height: 190,
+                                child: Container(
+                                  padding: const EdgeInsets.all(2), // Border width
+                                  decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip12), borderRadius: BorderRadius.circular(20)),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20), // Image border
+                                    child: SizedBox.fromSize(
+                                      size: const Size.fromRadius(48), // Image radius
+                                      child: Image.asset(
+                                        q14,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
                         ]
                         else if (value2 == 1.0) ... [
                           GestureDetector(
@@ -467,6 +812,10 @@ class _WorkoutPageState extends State<WorkoutPage> {
                                 valueEquip2 = 0.0;
                                 valueEquip3 = 0.0;
                                 valueEquip4 = 0.0;
+                                valueEquip5 = 0.0;
+                                valueEquip6 = 0.0;
+                                valueEquip7 = 0.0;
+                                valueEquip8 = 0.0;
 
                               });
                             },
@@ -499,6 +848,10 @@ class _WorkoutPageState extends State<WorkoutPage> {
                                 valueEquip2 = 1.0;
                                 valueEquip3 = 0.0;
                                 valueEquip4 = 0.0;
+                                valueEquip5 = 0.0;
+                                valueEquip6 = 0.0;
+                                valueEquip7 = 0.0;
+                                valueEquip8 = 0.0;
                               });
                             },
                             child:  Padding(
@@ -530,6 +883,10 @@ class _WorkoutPageState extends State<WorkoutPage> {
                                 valueEquip2 = 0.0;
                                 valueEquip3 = 1.0;
                                 valueEquip4 = 0.0;
+                                valueEquip5 = 0.0;
+                                valueEquip6 = 0.0;
+                                valueEquip7 = 0.0;
+                                valueEquip8 = 0.0;
                               });
                             },
                             child:  Padding(
@@ -561,6 +918,10 @@ class _WorkoutPageState extends State<WorkoutPage> {
                                 valueEquip2 = 0.0;
                                 valueEquip3 = 0.0;
                                 valueEquip4 = 1.0;
+                                valueEquip5 = 0.0;
+                                valueEquip6 = 0.0;
+                                valueEquip7 = 0.0;
+                                valueEquip8 = 0.0;
                               });
                             },
                             child:  Padding(
@@ -585,6 +946,148 @@ class _WorkoutPageState extends State<WorkoutPage> {
                               ),
                             ),
                           ),
+                          GestureDetector(
+                            onTap: (){
+                              setState((){
+                                valueEquip1 = 0.0;
+                                valueEquip2 = 0.0;
+                                valueEquip3 = 0.0;
+                                valueEquip4 = 0.0;
+                                valueEquip5 = 1.0;
+                                valueEquip6 = 0.0;
+                                valueEquip7 = 0.0;
+                                valueEquip8 = 0.0;
+                              });
+                            },
+                            child:  Padding(
+                              padding: const EdgeInsets.only(top:50.0),
+                              child: SizedBox(
+                                width: 190,
+                                height: 190,
+                                child: Container(
+                                  padding: const EdgeInsets.all(2), // Border width
+                                  decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip5), borderRadius: BorderRadius.circular(20)),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20), // Image border
+                                    child: SizedBox.fromSize(
+                                      size: const Size.fromRadius(48), // Image radius
+                                      child: Image.asset(
+                                        q36,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: (){
+                              setState((){
+                                valueEquip1 = 0.0;
+                                valueEquip2 = 0.0;
+                                valueEquip3 = 0.0;
+                                valueEquip4 = 0.0;
+                                valueEquip5 = 0.0;
+                                valueEquip6 = 1.0;
+                                valueEquip7 = 0.0;
+                                valueEquip8 = 0.0;
+
+                              });
+                            },
+                            child:  Padding(
+                              padding: const EdgeInsets.only(top:50.0),
+                              child: SizedBox(
+                                width: 190,
+                                height: 190,
+                                child: Container(
+                                  padding: const EdgeInsets.all(2), // Border width
+                                  decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip6), borderRadius: BorderRadius.circular(20)),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20), // Image border
+                                    child: SizedBox.fromSize(
+                                      size: const Size.fromRadius(48), // Image radius
+                                      child: Image.asset(
+                                        q37,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: (){
+                              setState((){
+                                valueEquip1 = 0.0;
+                                valueEquip2 = 0.0;
+                                valueEquip3 = 0.0;
+                                valueEquip4 = 0.0;
+                                valueEquip5 = 0.0;
+                                valueEquip6 = 0.0;
+                                valueEquip7 = 1.0;
+                                valueEquip8 = 0.0;
+
+                              });
+                            },
+                            child:  Padding(
+                              padding: const EdgeInsets.only(top:50.0),
+                              child: SizedBox(
+                                width: 190,
+                                height: 190,
+                                child: Container(
+                                  padding: const EdgeInsets.all(2), // Border width
+                                  decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip7), borderRadius: BorderRadius.circular(20)),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20), // Image border
+                                    child: SizedBox.fromSize(
+                                      size: const Size.fromRadius(48), // Image radius
+                                      child: Image.asset(
+                                        q35,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: (){
+                              setState((){
+                                valueEquip1 = 0.0;
+                                valueEquip2 = 0.0;
+                                valueEquip3 = 0.0;
+                                valueEquip4 = 0.0;
+                                valueEquip5 = 0.0;
+                                valueEquip6 = 0.0;
+                                valueEquip7 = 0.0;
+                                valueEquip8 = 1.0;
+                              });
+                            },
+                            child:  Padding(
+                              padding: const EdgeInsets.only(top:50.0),
+                              child: SizedBox(
+                                width: 190,
+                                height: 190,
+                                child: Container(
+                                  padding: const EdgeInsets.all(2), // Border width
+                                  decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip8), borderRadius: BorderRadius.circular(20)),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20), // Image border
+                                    child: SizedBox.fromSize(
+                                      size: const Size.fromRadius(48), // Image radius
+                                      child: Image.asset(
+                                        q34,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
                         ]
                         else if (value3 == 1.0) ... [
                           GestureDetector(
@@ -594,7 +1097,10 @@ class _WorkoutPageState extends State<WorkoutPage> {
                                   valueEquip2 = 0.0;
                                   valueEquip3 = 0.0;
                                   valueEquip4 = 0.0;
-
+                                  valueEquip5 = 0.0;
+                                  valueEquip6 = 0.0;
+                                  valueEquip7 = 0.0;
+                                  valueEquip8 = 0.0;
                                 });
                               },
                               child:  Padding(
@@ -626,6 +1132,10 @@ class _WorkoutPageState extends State<WorkoutPage> {
                                   valueEquip2 = 1.0;
                                   valueEquip3 = 0.0;
                                   valueEquip4 = 0.0;
+                                  valueEquip5 = 0.0;
+                                  valueEquip6 = 0.0;
+                                  valueEquip7 = 0.0;
+                                  valueEquip8 = 0.0;
                                 });
                               },
                               child:  Padding(
@@ -657,6 +1167,10 @@ class _WorkoutPageState extends State<WorkoutPage> {
                                   valueEquip2 = 0.0;
                                   valueEquip3 = 1.0;
                                   valueEquip4 = 0.0;
+                                  valueEquip5 = 0.0;
+                                  valueEquip6 = 0.0;
+                                  valueEquip7 = 0.0;
+                                  valueEquip8 = 0.0;
                                 });
                               },
                               child:  Padding(
@@ -688,6 +1202,10 @@ class _WorkoutPageState extends State<WorkoutPage> {
                                   valueEquip2 = 0.0;
                                   valueEquip3 = 0.0;
                                   valueEquip4 = 1.0;
+                                  valueEquip5 = 0.0;
+                                  valueEquip6 = 0.0;
+                                  valueEquip7 = 0.0;
+                                  valueEquip8 = 0.0;
                                 });
                               },
                               child:  Padding(
@@ -712,6 +1230,146 @@ class _WorkoutPageState extends State<WorkoutPage> {
                                 ),
                               ),
                             ),
+                          GestureDetector(
+                              onTap: (){
+                                setState((){
+                                  valueEquip1 = 0.0;
+                                  valueEquip2 = 0.0;
+                                  valueEquip3 = 0.0;
+                                  valueEquip4 = 0.0;
+                                  valueEquip5 = 1.0;
+                                  valueEquip6 = 0.0;
+                                  valueEquip7 = 0.0;
+                                  valueEquip8 = 0.0;
+                                });
+                              },
+                              child:  Padding(
+                                padding: const EdgeInsets.only(top:50.0),
+                                child: SizedBox(
+                                  width: 190,
+                                  height: 190,
+                                  child: Container(
+                                    padding: const EdgeInsets.all(2), // Border width
+                                    decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip5), borderRadius: BorderRadius.circular(20)),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(20), // Image border
+                                      child: SizedBox.fromSize(
+                                        size: const Size.fromRadius(48), // Image radius
+                                        child: Image.asset(
+                                          q35,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          GestureDetector(
+                              onTap: (){
+                                setState((){
+                                  valueEquip1 = 0.0;
+                                  valueEquip2 = 0.0;
+                                  valueEquip3 = 0.0;
+                                  valueEquip4 = 0.0;
+                                  valueEquip5 = 0.0;
+                                  valueEquip6 = 1.0;
+                                  valueEquip7 = 0.0;
+                                  valueEquip8 = 0.0;
+                                });
+                              },
+                              child:  Padding(
+                                padding: const EdgeInsets.only(top:50.0),
+                                child: SizedBox(
+                                  width: 190,
+                                  height: 190,
+                                  child: Container(
+                                    padding: const EdgeInsets.all(2), // Border width
+                                    decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip6), borderRadius: BorderRadius.circular(20)),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(20), // Image border
+                                      child: SizedBox.fromSize(
+                                        size: const Size.fromRadius(48), // Image radius
+                                        child: Image.asset(
+                                          q34,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          GestureDetector(
+                              onTap: (){
+                                setState((){
+                                  valueEquip1 = 0.0;
+                                  valueEquip2 = 0.0;
+                                  valueEquip3 = 0.0;
+                                  valueEquip4 = 0.0;
+                                  valueEquip5 = 0.0;
+                                  valueEquip6 = 0.0;
+                                  valueEquip7 = 1.0;
+                                  valueEquip8 = 0.0;
+                                });
+                              },
+                              child:  Padding(
+                                padding: const EdgeInsets.only(top:50.0),
+                                child: SizedBox(
+                                  width: 190,
+                                  height: 190,
+                                  child: Container(
+                                    padding: const EdgeInsets.all(2), // Border width
+                                    decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip7), borderRadius: BorderRadius.circular(20)),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(20), // Image border
+                                      child: SizedBox.fromSize(
+                                        size: const Size.fromRadius(48), // Image radius
+                                        child: Image.asset(
+                                          q38,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          GestureDetector(
+                              onTap: (){
+                                setState((){
+                                  valueEquip1 = 0.0;
+                                  valueEquip2 = 0.0;
+                                  valueEquip3 = 0.0;
+                                  valueEquip4 = 0.0;
+                                  valueEquip5 = 0.0;
+                                  valueEquip6 = 0.0;
+                                  valueEquip7 = 0.0;
+                                  valueEquip8 = 1.0;
+                                });
+                              },
+                              child:  Padding(
+                                padding: const EdgeInsets.only(top:50.0),
+                                child: SizedBox(
+                                  width: 190,
+                                  height: 190,
+                                  child: Container(
+                                    padding: const EdgeInsets.all(2), // Border width
+                                    decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip8), borderRadius: BorderRadius.circular(20)),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(20), // Image border
+                                      child: SizedBox.fromSize(
+                                        size: const Size.fromRadius(48), // Image radius
+                                        child: Image.asset(
+                                          q39,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
                         ]
                         else if (value4 == 1.0) ... [
                           GestureDetector(
@@ -721,6 +1379,9 @@ class _WorkoutPageState extends State<WorkoutPage> {
                                     valueEquip2 = 0.0;
                                     valueEquip3 = 0.0;
                                     valueEquip4 = 0.0;
+                                    valueEquip5 = 0.0;
+                                    valueEquip6 = 0.0;
+                                    valueEquip7 = 0.0;
 
                                   });
                                 },
@@ -753,6 +1414,10 @@ class _WorkoutPageState extends State<WorkoutPage> {
                                     valueEquip2 = 1.0;
                                     valueEquip3 = 0.0;
                                     valueEquip4 = 0.0;
+                                    valueEquip5 = 0.0;
+                                    valueEquip6 = 0.0;
+                                    valueEquip7 = 0.0;
+
                                   });
                                 },
                                 child:  Padding(
@@ -784,6 +1449,10 @@ class _WorkoutPageState extends State<WorkoutPage> {
                                     valueEquip2 = 0.0;
                                     valueEquip3 = 1.0;
                                     valueEquip4 = 0.0;
+                                    valueEquip5 = 0.0;
+                                    valueEquip6 = 0.0;
+                                    valueEquip7 = 0.0;
+
                                   });
                                 },
                                 child:  Padding(
@@ -815,6 +1484,10 @@ class _WorkoutPageState extends State<WorkoutPage> {
                                     valueEquip2 = 0.0;
                                     valueEquip3 = 0.0;
                                     valueEquip4 = 1.0;
+                                    valueEquip5 = 0.0;
+                                    valueEquip6 = 0.0;
+                                    valueEquip7 = 0.0;
+
                                   });
                                 },
                                 child:  Padding(
@@ -831,6 +1504,111 @@ class _WorkoutPageState extends State<WorkoutPage> {
                                           size: const Size.fromRadius(48), // Image radius
                                           child: Image.asset(
                                             q31,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                          GestureDetector(
+                                onTap: (){
+                                  setState((){
+                                    valueEquip1 = 0.0;
+                                    valueEquip2 = 0.0;
+                                    valueEquip3 = 0.0;
+                                    valueEquip4 = 0.0;
+                                    valueEquip5 = 1.0;
+                                    valueEquip6 = 0.0;
+                                    valueEquip7 = 0.0;
+
+                                  });
+                                },
+                                child:  Padding(
+                                  padding: const EdgeInsets.only(top:50.0),
+                                  child: SizedBox(
+                                    width: 190,
+                                    height: 190,
+                                    child: Container(
+                                      padding: EdgeInsets.all(2), // Border width
+                                      decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip5), borderRadius: BorderRadius.circular(20)),
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(20), // Image border
+                                        child: SizedBox.fromSize(
+                                          size: const Size.fromRadius(48), // Image radius
+                                          child: Image.asset(
+                                            q40,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                          GestureDetector(
+                                onTap: (){
+                                  setState((){
+                                    valueEquip1 = 0.0;
+                                    valueEquip2 = 0.0;
+                                    valueEquip3 = 0.0;
+                                    valueEquip4 = 0.0;
+                                    valueEquip5 = 0.0;
+                                    valueEquip6 = 1.0;
+                                    valueEquip7 = 0.0;
+
+                                  });
+                                },
+                                child:  Padding(
+                                  padding: const EdgeInsets.only(top:50.0),
+                                  child: SizedBox(
+                                    width: 190,
+                                    height: 190,
+                                    child: Container(
+                                      padding: EdgeInsets.all(2), // Border width
+                                      decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip6), borderRadius: BorderRadius.circular(20)),
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(20), // Image border
+                                        child: SizedBox.fromSize(
+                                          size: const Size.fromRadius(48), // Image radius
+                                          child: Image.asset(
+                                            q42,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                          GestureDetector(
+                                onTap: (){
+                                  setState((){
+                                    valueEquip1 = 0.0;
+                                    valueEquip2 = 0.0;
+                                    valueEquip3 = 0.0;
+                                    valueEquip4 = 0.0;
+                                    valueEquip5 = 0.0;
+                                    valueEquip6 = 0.0;
+                                    valueEquip7 = 1.0;
+
+                                  });
+                                },
+                                child:  Padding(
+                                  padding: const EdgeInsets.only(top:50.0),
+                                  child: SizedBox(
+                                    width: 190,
+                                    height: 190,
+                                    child: Container(
+                                      padding: EdgeInsets.all(2), // Border width
+                                      decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip7), borderRadius: BorderRadius.circular(20)),
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(20), // Image border
+                                        child: SizedBox.fromSize(
+                                          size: const Size.fromRadius(48), // Image radius
+                                          child: Image.asset(
+                                            q40,
                                             fit: BoxFit.cover,
                                           ),
                                         ),
@@ -1112,6 +1890,9 @@ class _WorkoutPageState extends State<WorkoutPage> {
                             _isVisibleEquipment = false;
                             _isVisibleBodyPart = false;
                             _isVisibleWeight = false;
+                            timestamp = DateTime.now().millisecondsSinceEpoch;
+                            DateTime tsdate = DateTime.fromMillisecondsSinceEpoch(timestamp);
+                            nowDate = tsdate.day.toString() + "/" + tsdate.month.toString() + "/" + tsdate.year.toString();
                             Navigator.push(context, MaterialPageRoute(builder: (context) {
                               return const MyHomePage(title: 'Home',);
                             }));
@@ -1123,6 +1904,9 @@ class _WorkoutPageState extends State<WorkoutPage> {
                             _isVisibleBodyPart = false;
                             _isVisibleWeight = false;
                             _isVisibleRepsText = false;
+                            timestamp = DateTime.now().millisecondsSinceEpoch;
+                            DateTime tsdate = DateTime.fromMillisecondsSinceEpoch(timestamp);
+                            nowDate = tsdate.day.toString() + "/" + tsdate.month.toString() + "/" + tsdate.year.toString();
                             Navigator.push(context, MaterialPageRoute(builder: (context) {
                               return const MyHomePage(title: 'Home',);
                             }));
