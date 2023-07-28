@@ -41,6 +41,8 @@ var q39 = "assets/images/q39.png";
 var q40 = "assets/images/q40.png";
 var q42 = "assets/images/q42.png";
 var q43 = "assets/images/q43.png";
+var q44 = "assets/images/q44.png";
+var q45 = "assets/images/q45.png";
 
 // body parts
 double value1 = 0.0;
@@ -71,8 +73,13 @@ int onlyRepsValue = 0;
 // Well lets name it as Abomination
 var workoutMainText = "Body Part";
 var homeIcon = Icons.arrow_left_sharp;
+var realHomeIcon = Icons.home;
 var trigger = false;
 int timestamp = 0;
 String nowDate = "";
+var dataList;
+var tempTrig = false;
+
+
 
 

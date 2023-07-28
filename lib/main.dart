@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_expandable_fab/flutter_expandable_fab.dart';
 import 'package:fitness_app/_variables.dart';
-import 'package:fitness_app/_logics.dart';
-import 'dart:io';
 import 'package:motion_toast/motion_toast.dart';
 
 void main() {
   runApp(const MyApp());
 }
+
+List<Widget> _cardList = [];
+
 
 // Visibility
 var _isVisibleBodyPart = true;
@@ -105,7 +106,12 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 setState(() {
                   _isVisibleBodyPart = true;
+                  _isVisibleEquipment = false;
+                  _isVisibleWeight = false;
+                  _isVisibleNextBtn2 = false;
+                  _isVisibleNextBtn3 = false;
                   _isVisibleNextBtn1 = true;
+                  trigger = false;
                   workoutMainText = "Body Part";
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return const WorkoutPage();
@@ -118,7 +124,12 @@ class _MyHomePageState extends State<MyHomePage> {
               heroTag: null,
               backgroundColor: BG,
               child: const Icon(Icons.list),
-              onPressed: () {},
+              onPressed: () {
+
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const ListPage(title: 'List',);
+                }));
+              },
             ),
             FloatingActionButton.small(
               heroTag: null,
@@ -141,10 +152,12 @@ class WorkoutPage extends StatefulWidget {
   State<WorkoutPage> createState() => _WorkoutPageState();
 }
 
-class _WorkoutPageState extends State<WorkoutPage> {
+class _WorkoutPageState extends State<WorkoutPage>  {
 
   @override
   Widget build(BuildContext context) {
+
+    mainLogics();
     return SafeArea(
       child: Scaffold(
         extendBodyBehindAppBar: true,
@@ -1608,7 +1621,7 @@ class _WorkoutPageState extends State<WorkoutPage> {
                                         child: SizedBox.fromSize(
                                           size: const Size.fromRadius(48), // Image radius
                                           child: Image.asset(
-                                            q40,
+                                            q43,
                                             fit: BoxFit.cover,
                                           ),
                                         ),
@@ -1665,6 +1678,7 @@ class _WorkoutPageState extends State<WorkoutPage> {
                                       borderRadius: BorderRadius.circular(10)
                                   ),
                                 ),
+
                               )
                           ),
                         ),
@@ -1837,6 +1851,16 @@ class _WorkoutPageState extends State<WorkoutPage> {
                               _isVisibleWeightRepsText = false;
                               _isVisibleRepsText = true;
                             }
+                            else if (valueEquip7 == 1) {
+
+                              _isVisibleWeightRepsText = false;
+                              _isVisibleRepsText = true;
+                            }
+                            else if (valueEquip8 == 1) {
+
+                              _isVisibleWeightRepsText = false;
+                              _isVisibleRepsText = true;
+                            }
                             else {
                               _isVisibleWeightRepsText = true;
                               _isVisibleRepsText = false;
@@ -1847,13 +1871,14 @@ class _WorkoutPageState extends State<WorkoutPage> {
                             _isVisibleRepsText = false;
                           }
 
-                          if (valueEquip1 == 1 || valueEquip2 == 1 || valueEquip3 == 1 || valueEquip4 == 1) {
+                          if (valueEquip1 == 1 || valueEquip2 == 1 || valueEquip3 == 1 || valueEquip4 == 1 || valueEquip5 == 1 || valueEquip6 == 1 || valueEquip7 == 1 || valueEquip8 == 1 || valueEquip9 == 1 || valueEquip10 == 1 || valueEquip11 == 1 || valueEquip12 == 1) {
                             workoutMainText = "Weight & Reps";
                             _isVisibleNextBtn3 = true;
                             _isVisibleNextBtn2 = false;
                             _isVisibleBodyPart = false;
                             _isVisibleEquipment = false;
                             _isVisibleWeight = true;
+                            tempTrig = true;
                           }
 
 
@@ -1893,8 +1918,9 @@ class _WorkoutPageState extends State<WorkoutPage> {
                             timestamp = DateTime.now().millisecondsSinceEpoch;
                             DateTime tsdate = DateTime.fromMillisecondsSinceEpoch(timestamp);
                             nowDate = tsdate.day.toString() + "/" + tsdate.month.toString() + "/" + tsdate.year.toString();
+                            trigger = true;
                             Navigator.push(context, MaterialPageRoute(builder: (context) {
-                              return const MyHomePage(title: 'Home',);
+                              return const ListPage(title: 'List');
                             }));
                           }
                           if (onlyRepsValue != 0) {
@@ -1907,8 +1933,9 @@ class _WorkoutPageState extends State<WorkoutPage> {
                             timestamp = DateTime.now().millisecondsSinceEpoch;
                             DateTime tsdate = DateTime.fromMillisecondsSinceEpoch(timestamp);
                             nowDate = tsdate.day.toString() + "/" + tsdate.month.toString() + "/" + tsdate.year.toString();
+                            trigger = true;
                             Navigator.push(context, MaterialPageRoute(builder: (context) {
-                              return const MyHomePage(title: 'Home',);
+                              return const ListPage(title: "List");
                             }));
                           }
                         });
@@ -1978,7 +2005,11 @@ class _WorkoutPageState extends State<WorkoutPage> {
               heroTag: null,
               backgroundColor: BG,
               child: const Icon(Icons.list),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const ListPage(title: 'Home',);
+                }));
+              },
             ),
             FloatingActionButton.small(
               heroTag: null,
@@ -1993,13 +2024,223 @@ class _WorkoutPageState extends State<WorkoutPage> {
   }
 }
 
-class ListPage extends StatelessWidget {
-  const ListPage({Key? key}) : super(key: key);
+class ListPage extends StatefulWidget {
+  const ListPage({super.key, required String title});
+
+  @override
+  State<ListPage> createState() => _ListPageState();
+}
+
+class _ListPageState extends State<ListPage> {
+
+  void _addCardWidget() {
+    setState(() {
+      _cardList.add(_card());
+    });
+  }
+
+  Widget _card() {
+    return Padding(
+      padding: const EdgeInsets.only(bottom:30.0,top: 20),
+      child: Container(
+        height: 390,
+        decoration: BoxDecoration(
+            color: B,
+            borderRadius: const BorderRadius.all(Radius.circular(20))
+        ),
+        child: Stack(
+          children: [
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                width: double.infinity,
+                height: 50,
+                decoration: BoxDecoration(
+                    color: BG,
+                    borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(20),bottomRight: Radius.circular(20))
+                ),
+                child: GestureDetector(
+                  child: const Center(
+                    child: Icon(
+                      Icons.delete,
+                      size: 40,
+                    ),
+                  ),
+                  onTap: (){
+                    setState(() {
+
+                    });
+                  },
+                ),
+              ),
+            ),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.only(top: 230.0),
+                child: Container(
+                  width: double.infinity,
+                  color: B,
+                  height: 60,
+                  child:   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(right: 100.0),
+                        child: Text(
+                          "weight",
+                          style: TextStyle(
+                            color: BG
+                          ),
+                        ),
+                      ),
+                      Text(
+                        "row",
+                        style: TextStyle(
+                            color: BG
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment.topCenter,
+              child: Container(
+                width: double.infinity,
+                height: 285,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)), // Image border
+                  child: SizedBox.fromSize(
+                    size: const Size.fromRadius(48), // Image radius
+                    child: Image.asset(
+                      q9,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+            )
+          ]
+        ),
+      ),
+    );
+  }
+
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+
+    if (trigger == true) {
+      _addCardWidget();
+    }
+    return SafeArea(
+      child: Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          //backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          backgroundColor: B.withOpacity(0.5),
+          title: Center(
+              child: Text(
+                "List",
+                style: TextStyle(
+                    fontFamily: "Hanuman",
+                    fontSize: 30,
+                    color: BG
+                ),
+              )
+          ),
+        ),
+        body: Stack(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage(q45),
+                      fit: BoxFit.cover
+                  )
+              ),
+            ),
+            Center(
+              child: Container(
+                width: 300,
+                height: double.infinity,
+                child: ListView.builder(itemCount:_cardList.length,itemBuilder: (context,index) {
+                  return SingleChildScrollView(
+                      scrollDirection: Axis.vertical,
+                      child: _cardList[index]
+                  );
+                }
+
+                ),
+              ),
+            ),
+          ]
+        ),
+
+        floatingActionButtonLocation: ExpandableFab.location,
+        floatingActionButton: ExpandableFab(
+          expandedFabShape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30)
+          ),
+          collapsedFabShape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30)),
+          fanAngle: 90,
+          overlayStyle: ExpandableFabOverlayStyle(
+            // color: Colors.black.withOpacity(0.5),
+            blur: 5,
+          ),
+          child: const Icon(
+            Icons.menu,
+            size: 30,
+          ),
+          backgroundColor: BG,
+          closeButtonStyle:  ExpandableFabCloseButtonStyle(backgroundColor: BG),
+          children: [
+            FloatingActionButton.small(
+              heroTag: null,
+              backgroundColor: BG,
+              child: Icon(realHomeIcon),
+              onPressed: () {
+                setState(() {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const MyHomePage(title: 'Home',);
+                  }));
+                });
+              },
+            ),
+            FloatingActionButton.small(
+              heroTag: null,
+              backgroundColor: BG,
+              child: const Icon(Icons.fitness_center),
+              onPressed: () {
+                _isVisibleBodyPart = true;
+                _isVisibleEquipment = false;
+                _isVisibleWeight = false;
+                _isVisibleNextBtn2 = false;
+                _isVisibleNextBtn3 = false;
+                _isVisibleNextBtn1 = true;
+                trigger = false;
+                workoutMainText = "Body Part";
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const WorkoutPage();
+                }));
+              },
+            ),
+            FloatingActionButton.small(
+              heroTag: null,
+              backgroundColor: BG,
+              child: const Icon(Icons.bar_chart),
+              onPressed: () {},
+            ),
+          ],
+        ),
+      ),
+    );
   }
+
+
 }
 
 class ProgressPage extends StatelessWidget {
