@@ -63,6 +63,8 @@ double valueEquip11 = 0.0;
 double valueEquip12 = 0.0;
 double valueEquip13 = 0.0;
 double valueEquip14 = 0.0;
+var MbodyPart;
+var Mequipment;
 
 //TextFieldValues
 int weightValue = 0;
@@ -78,7 +80,7 @@ var trigger = false;
 int timestamp = 0;
 String nowDate = "";
 var dataList;
-var tempTrig = false;
+
 
 
 

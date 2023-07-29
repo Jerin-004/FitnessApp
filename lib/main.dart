@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_expandable_fab/flutter_expandable_fab.dart';
 import 'package:fitness_app/_variables.dart';
+import 'package:fitness_app/model/list.dart';
+import 'package:fitness_app/service/dataService.dart';
 import 'package:motion_toast/motion_toast.dart';
 
 void main() {
   runApp(const MyApp());
 }
-
-List<Widget> _cardList = [];
-
 
 // Visibility
 var _isVisibleBodyPart = true;
@@ -154,10 +153,10 @@ class WorkoutPage extends StatefulWidget {
 
 class _WorkoutPageState extends State<WorkoutPage>  {
 
+  var _dataService = DataService();
   @override
   Widget build(BuildContext context) {
 
-    mainLogics();
     return SafeArea(
       child: Scaffold(
         extendBodyBehindAppBar: true,
@@ -1878,7 +1877,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                             _isVisibleBodyPart = false;
                             _isVisibleEquipment = false;
                             _isVisibleWeight = true;
-                            tempTrig = true;
+
                           }
 
 
@@ -1907,7 +1906,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                         color: BG,
                     ),
                     child: IconButton(
-                      onPressed: () {
+                      onPressed: ()  async {
                         setState(() {
                           if (weightValue != 0 && repsValue != 0) {
                             _isVisibleNextBtn2 = false;
@@ -1918,7 +1917,123 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                             timestamp = DateTime.now().millisecondsSinceEpoch;
                             DateTime tsdate = DateTime.fromMillisecondsSinceEpoch(timestamp);
                             nowDate = tsdate.day.toString() + "/" + tsdate.month.toString() + "/" + tsdate.year.toString();
-                            trigger = true;
+                            if (value1 == 1) {
+                              MbodyPart = "Biceps";
+                              if (valueEquip1 == 1) {
+                                Mequipment = q9;
+                              }
+                              else if (valueEquip2 == 1) {
+                                Mequipment = q10;
+                              }
+                              else if (valueEquip3 == 1) {
+                                Mequipment = q11;
+                              }
+                              else if (valueEquip4 == 1) {
+                                Mequipment = q12;
+                              }
+                              else if (valueEquip5 == 1) {
+                                Mequipment = q32;
+                              }
+                              else if (valueEquip6 == 1) {
+                                Mequipment = q33;
+                              }
+                              else if (valueEquip7 == 1) {
+                                Mequipment = q34;
+                              }
+                              else if (valueEquip8 == 1) {
+                                Mequipment = q35;
+                              }
+                              else if (valueEquip9 == 1) {
+                                Mequipment = q36;
+                              }
+                              else if (valueEquip10 == 1) {
+                                Mequipment = q37;
+                              }
+                              else if (valueEquip11 == 1) {
+                                Mequipment = q13;
+                              }
+                              else if (valueEquip12 == 1) {
+                                Mequipment = q14;
+                              }
+                            }
+                            else if (value2 == 1) {
+                              MbodyPart = "Chest";
+                              if (valueEquip1 == 1) {
+                                Mequipment = q13;
+                              }
+                              else if (valueEquip2 == 1) {
+                                Mequipment = q14;
+                              }
+                              else if (valueEquip3 == 1) {
+                                Mequipment = q16;
+                              }
+                              else if (valueEquip4 == 1) {
+                                Mequipment = q18;
+                              }
+                              else if (valueEquip5 == 1) {
+                                Mequipment = q36;
+                              }
+                              else if (valueEquip6 == 1) {
+                                Mequipment = q37;
+                              }
+                              else if (valueEquip7 == 1) {
+                                Mequipment = q35;
+                              }
+                              else if (valueEquip8 == 1) {
+                                Mequipment = q34;
+                              }
+                            }
+                            else if (value3 == 1) {
+                              MbodyPart = "Abs";
+                              if (valueEquip1 == 1) {
+                                Mequipment = q21;
+                              }
+                              else if (valueEquip2 == 1) {
+                                Mequipment = q23;
+                              }
+                              else if (valueEquip3 == 1) {
+                                Mequipment = q24;
+                              }
+                              else if (valueEquip4 == 1) {
+                                Mequipment = q25;
+                              }
+                              else if (valueEquip5 == 1) {
+                                Mequipment = q35;
+                              }
+                              else if (valueEquip6 == 1) {
+                                Mequipment = q34;
+                              }
+                              else if (valueEquip7 == 1) {
+                                Mequipment = q38;
+                              }
+                              else if (valueEquip8 == 1) {
+                                Mequipment = q39;
+                              }
+                            }
+                            else if (value4 == 1) {
+                              MbodyPart = "Legs";
+                              if (valueEquip1 == 1) {
+                                Mequipment = q26;
+                              }
+                              else if (valueEquip2 == 1) {
+                                Mequipment = q29;
+                              }
+                              else if (valueEquip3 == 1) {
+                                Mequipment = q30;
+                              }
+                              else if (valueEquip4 == 1) {
+                                Mequipment = q31;
+                              }
+                              else if (valueEquip5 == 1) {
+                                Mequipment = q40;
+                              }
+                              else if (valueEquip6 == 1) {
+                                Mequipment = q42;
+                              }
+                              else if (valueEquip7 == 1) {
+                                Mequipment = q43;
+                              }
+                            }
                             Navigator.push(context, MaterialPageRoute(builder: (context) {
                               return const ListPage(title: 'List');
                             }));
@@ -1933,12 +2048,146 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                             timestamp = DateTime.now().millisecondsSinceEpoch;
                             DateTime tsdate = DateTime.fromMillisecondsSinceEpoch(timestamp);
                             nowDate = tsdate.day.toString() + "/" + tsdate.month.toString() + "/" + tsdate.year.toString();
-                            trigger = true;
+                            if (value1 == 1) {
+                              MbodyPart = "Biceps";
+                              if (valueEquip1 == 1) {
+                                Mequipment = q9;
+                              }
+                              else if (valueEquip2 == 1) {
+                                Mequipment = q10;
+                              }
+                              else if (valueEquip3 == 1) {
+                                Mequipment = q11;
+                              }
+                              else if (valueEquip4 == 1) {
+                                Mequipment = q12;
+                              }
+                              else if (valueEquip5 == 1) {
+                                Mequipment = q32;
+                              }
+                              else if (valueEquip6 == 1) {
+                                Mequipment = q33;
+                              }
+                              else if (valueEquip7 == 1) {
+                                Mequipment = q34;
+                              }
+                              else if (valueEquip8 == 1) {
+                                Mequipment = q35;
+                              }
+                              else if (valueEquip9 == 1) {
+                                Mequipment = q36;
+                              }
+                              else if (valueEquip10 == 1) {
+                                Mequipment = q37;
+                              }
+                              else if (valueEquip11 == 1) {
+                                Mequipment = q13;
+                              }
+                              else if (valueEquip12 == 1) {
+                                Mequipment = q14;
+                              }
+                            }
+                            else if (value2 == 1) {
+                              MbodyPart = "Chest";
+                              if (valueEquip1 == 1) {
+                                Mequipment = q13;
+                              }
+                              else if (valueEquip2 == 1) {
+                                Mequipment = q14;
+                              }
+                              else if (valueEquip3 == 1) {
+                                Mequipment = q16;
+                              }
+                              else if (valueEquip4 == 1) {
+                                Mequipment = q18;
+                              }
+                              else if (valueEquip5 == 1) {
+                                Mequipment = q36;
+                              }
+                              else if (valueEquip6 == 1) {
+                                Mequipment = q37;
+                              }
+                              else if (valueEquip7 == 1) {
+                                Mequipment = q35;
+                              }
+                              else if (valueEquip8 == 1) {
+                                Mequipment = q34;
+                              }
+                            }
+                            else if (value3 == 1) {
+                              MbodyPart = "Abs";
+                              if (valueEquip1 == 1) {
+                                Mequipment = q21;
+                              }
+                              else if (valueEquip2 == 1) {
+                                Mequipment = q23;
+                              }
+                              else if (valueEquip3 == 1) {
+                                Mequipment = q24;
+                              }
+                              else if (valueEquip4 == 1) {
+                                Mequipment = q25;
+                              }
+                              else if (valueEquip5 == 1) {
+                                Mequipment = q35;
+                              }
+                              else if (valueEquip6 == 1) {
+                                Mequipment = q34;
+                              }
+                              else if (valueEquip7 == 1) {
+                                Mequipment = q38;
+                              }
+                              else if (valueEquip8 == 1) {
+                                Mequipment = q39;
+                              }
+                            }
+                            else if (value4 == 1) {
+                              MbodyPart = "Legs";
+                              if (valueEquip1 == 1) {
+                                Mequipment = q26;
+                              }
+                              else if (valueEquip2 == 1) {
+                                Mequipment = q29;
+                              }
+                              else if (valueEquip3 == 1) {
+                                Mequipment = q30;
+                              }
+                              else if (valueEquip4 == 1) {
+                                Mequipment = q31;
+                              }
+                              else if (valueEquip5 == 1) {
+                                Mequipment = q40;
+                              }
+                              else if (valueEquip6 == 1) {
+                                Mequipment = q42;
+                              }
+                              else if (valueEquip7 == 1) {
+                                Mequipment = q43;
+                              }
+                            }
                             Navigator.push(context, MaterialPageRoute(builder: (context) {
                               return const ListPage(title: "List");
                             }));
                           }
                         });
+                        if (weightValue != 0 && repsValue != 0) {
+                          var _data = ModelList();
+                          _data.equipment = Mequipment;
+                          _data.weight = weightValue;
+                          _data.reps = repsValue;
+                          _data.date = nowDate;
+                          var result = await _dataService.SaveData(_data);
+                          print(result);
+                        }
+                        if (onlyRepsValue != 0) {
+                          var _data = ModelList();
+                          _data.equipment = Mequipment;
+                          _data.weight = 0;
+                          _data.reps = repsValue;
+                          _data.date = nowDate;
+                          var result = await _dataService.SaveData(_data);
+                          print(result);
+                        }
                       },
                       icon: Icon(
                         Icons.arrow_right_alt_rounded,
@@ -2033,107 +2282,74 @@ class ListPage extends StatefulWidget {
 
 class _ListPageState extends State<ListPage> {
 
-  void _addCardWidget() {
-    setState(() {
-      _cardList.add(_card());
+  late List<ModelList> _dataList;
+  final _dataService = DataService();
+
+  getAllData() async {
+    _dataList=<ModelList>[];
+    var totData = await _dataService.readAllData();
+    totData.forEach((data){
+      setState(() {
+        var dataModel = ModelList();
+        dataModel.id = data["id"];
+        dataModel.equipment = data["equipment"];
+        dataModel.weight = data["weight"];
+        dataModel.reps = data["reps"];
+        dataModel.date = data["date"];
+        _dataList.add(dataModel);
+      });
     });
   }
 
-  Widget _card() {
-    return Padding(
-      padding: const EdgeInsets.only(bottom:30.0,top: 20),
-      child: Container(
-        height: 390,
-        decoration: BoxDecoration(
-            color: B,
-            borderRadius: const BorderRadius.all(Radius.circular(20))
-        ),
-        child: Stack(
-          children: [
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                width: double.infinity,
-                height: 50,
-                decoration: BoxDecoration(
-                    color: BG,
-                    borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(20),bottomRight: Radius.circular(20))
-                ),
-                child: GestureDetector(
-                  child: const Center(
-                    child: Icon(
-                      Icons.delete,
-                      size: 40,
-                    ),
-                  ),
-                  onTap: (){
-                    setState(() {
-
-                    });
-                  },
-                ),
-              ),
-            ),
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.only(top: 230.0),
-                child: Container(
-                  width: double.infinity,
-                  color: B,
-                  height: 60,
-                  child:   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(right: 100.0),
-                        child: Text(
-                          "weight",
-                          style: TextStyle(
-                            color: BG
-                          ),
-                        ),
-                      ),
-                      Text(
-                        "row",
-                        style: TextStyle(
-                            color: BG
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            Align(
-              alignment: Alignment.topCenter,
-              child: Container(
-                width: double.infinity,
-                height: 285,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)), // Image border
-                  child: SizedBox.fromSize(
-                    size: const Size.fromRadius(48), // Image radius
-                    child: Image.asset(
-                      q9,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-              ),
-            )
-          ]
-        ),
-      ),
-    );
+  @override
+  void initState() {
+    getAllData();
+    super.initState();
   }
 
+  _deleteListData(BuildContext context, id) {
+    return showDialog(
+        context: context,
+        builder: (param) {
+          return AlertDialog(
+          backgroundColor: B,
+            title: Text(
+              'Are You Sure to Delete',
+              style: TextStyle(color: BG, fontSize: 20),
+            ),
+            actions: [
+              TextButton(
+                  style: TextButton.styleFrom(
+                      primary: Colors.white, // foreground
+                      backgroundColor: Colors.red),
+                  onPressed: ()  async{
+                    var result=await _dataService.deleteData(id);
+                    setState(() {
+                      if (result != null) {
+                        Navigator.pop(context);
+                        getAllData();
+                      }
+                    });
+
+
+                  },
+                  child: const Text('Delete')),
+              TextButton(
+                  style: TextButton.styleFrom(
+                      primary: Colors.white, // foreground
+                      backgroundColor: Colors.teal),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Text('Close'))
+            ],
+          );
+        });
+  }
 
   @override
   Widget build(BuildContext context) {
 
-    if (trigger == true) {
-      _addCardWidget();
-    }
     return SafeArea(
       child: Scaffold(
         extendBodyBehindAppBar: true,
@@ -2166,10 +2382,90 @@ class _ListPageState extends State<ListPage> {
               child: Container(
                 width: 300,
                 height: double.infinity,
-                child: ListView.builder(itemCount:_cardList.length,itemBuilder: (context,index) {
+                child: ListView.builder(itemCount:_dataList.length,itemBuilder: (context,index) {
                   return SingleChildScrollView(
-                      scrollDirection: Axis.vertical,
-                      child: _cardList[index]
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom:30.0,top: 20),
+                      child: Container(
+                        height: 390,
+                        decoration: BoxDecoration(
+                            color: B,
+                            borderRadius: const BorderRadius.all(Radius.circular(20))
+                        ),
+                        child: Stack(
+                            children: [
+                              Align(
+                                alignment: Alignment.bottomCenter,
+                                child: Container(
+                                  width: double.infinity,
+                                  height: 50,
+                                  decoration: BoxDecoration(
+                                      color: BG,
+                                      borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(20),bottomRight: Radius.circular(20))
+                                  ),
+                                  child: IconButton(
+                                    onPressed: (){
+                                      _deleteListData(context,_dataList[index].id);
+                                    },
+                                    icon: Icon(
+                                      Icons.delete,
+                                      color: B,
+                                      size: 40,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(top: 230.0),
+                                  child: Container(
+                                    width: double.infinity,
+                                    color: B,
+                                    height: 60,
+                                    child:   Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Padding(
+                                          padding: EdgeInsets.only(right: 80.0),
+                                          child: Text(
+                                            "Weight : " + _dataList[index].weight.toString() + " Kgs",
+                                            style: TextStyle(
+                                                color: BG
+                                            ),
+                                          ),
+                                        ),
+                                        Text(
+                                          "Reps : " +_dataList[index].reps.toString(),
+                                          style: TextStyle(
+                                              color: BG
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Align(
+                                alignment: Alignment.topCenter,
+                                child: Container(
+                                  width: double.infinity,
+                                  height: 285,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)), // Image border
+                                    child: SizedBox.fromSize(
+                                      size: const Size.fromRadius(48), // Image radius
+                                      child: Image.asset(
+                                        _dataList[index].equipment.toString(),
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              )
+                            ]
+                        ),
+                      ),
+                    ),
                   );
                 }
 
