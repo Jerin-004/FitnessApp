@@ -3,6 +3,7 @@ import 'package:flutter_expandable_fab/flutter_expandable_fab.dart';
 import 'package:fitness_app/_variables.dart';
 import 'package:fitness_app/model/list.dart';
 import 'package:fitness_app/service/dataService.dart';
+import 'package:fl_chart/fl_chart.dart';
 import 'package:motion_toast/motion_toast.dart';
 
 void main() {
@@ -134,7 +135,11 @@ class _MyHomePageState extends State<MyHomePage> {
               heroTag: null,
               backgroundColor: BG,
               child: const Icon(Icons.bar_chart),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const ProgressPage(title: 'Progress',);
+                }));
+              },
             ),
           ],
         ),
@@ -215,7 +220,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                               width: 190,
                               height: 190,
                               child: Container(
-                                padding: EdgeInsets.all(2), // Border width
+                                padding: const EdgeInsets.all(2), // Border width
                                 decoration: BoxDecoration(color: Colors.blue.withOpacity(value1), borderRadius: BorderRadius.circular(20)),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(20), // Image border
@@ -246,7 +251,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                               width: 190,
                               height: 190,
                               child: Container(
-                                padding: EdgeInsets.all(2), // Border width
+                                padding: const EdgeInsets.all(2), // Border width
                                 decoration: BoxDecoration(color: Colors.blue.withOpacity(value2), borderRadius: BorderRadius.circular(20)),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(20), // Image border
@@ -277,7 +282,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                               width: 190,
                               height: 190,
                               child: Container(
-                                padding: EdgeInsets.all(2), // Border width
+                                padding: const EdgeInsets.all(2), // Border width
                                 decoration: BoxDecoration(color: Colors.blue.withOpacity(value3), borderRadius: BorderRadius.circular(20)),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(20), // Image border
@@ -308,7 +313,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                               width: 190,
                               height: 190,
                               child: Container(
-                                padding: EdgeInsets.all(2), // Border width
+                                padding: const EdgeInsets.all(2), // Border width
                                 decoration: BoxDecoration(color: Colors.blue.withOpacity(value4), borderRadius: BorderRadius.circular(20)),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(20), // Image border
@@ -369,7 +374,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                                 width: 190,
                                 height: 190,
                                 child: Container(
-                                  padding: EdgeInsets.all(2), // Border width
+                                  padding: const EdgeInsets.all(2), // Border width
                                   decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip1), borderRadius: BorderRadius.circular(20)),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(20), // Image border
@@ -408,7 +413,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                                 width: 190,
                                 height: 190,
                                 child: Container(
-                                  padding: EdgeInsets.all(2), // Border width
+                                  padding: const EdgeInsets.all(2), // Border width
                                   decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip2), borderRadius: BorderRadius.circular(20)),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(20), // Image border
@@ -447,7 +452,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                                 width: 190,
                                 height: 190,
                                 child: Container(
-                                  padding: EdgeInsets.all(2), // Border width
+                                  padding: const EdgeInsets.all(2), // Border width
                                   decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip3), borderRadius: BorderRadius.circular(20)),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(20), // Image border
@@ -837,7 +842,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                                 width: 190,
                                 height: 190,
                                 child: Container(
-                                  padding: EdgeInsets.all(2), // Border width
+                                  padding: const EdgeInsets.all(2), // Border width
                                   decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip1), borderRadius: BorderRadius.circular(20)),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(20), // Image border
@@ -872,7 +877,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                                 width: 190,
                                 height: 190,
                                 child: Container(
-                                  padding: EdgeInsets.all(2), // Border width
+                                  padding: const EdgeInsets.all(2), // Border width
                                   decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip2), borderRadius: BorderRadius.circular(20)),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(20), // Image border
@@ -907,7 +912,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                                 width: 190,
                                 height: 190,
                                 child: Container(
-                                  padding: EdgeInsets.all(2), // Border width
+                                  padding: const EdgeInsets.all(2), // Border width
                                   decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip3), borderRadius: BorderRadius.circular(20)),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(20), // Image border
@@ -942,7 +947,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                                 width: 190,
                                 height: 190,
                                 child: Container(
-                                  padding: EdgeInsets.all(2), // Border width
+                                  padding: const EdgeInsets.all(2), // Border width
                                   decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip4), borderRadius: BorderRadius.circular(20)),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(20), // Image border
@@ -1121,7 +1126,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                                   width: 190,
                                   height: 190,
                                   child: Container(
-                                    padding: EdgeInsets.all(2), // Border width
+                                    padding: const EdgeInsets.all(2), // Border width
                                     decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip1), borderRadius: BorderRadius.circular(20)),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(20), // Image border
@@ -1156,7 +1161,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                                   width: 190,
                                   height: 190,
                                   child: Container(
-                                    padding: EdgeInsets.all(2), // Border width
+                                    padding: const EdgeInsets.all(2), // Border width
                                     decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip2), borderRadius: BorderRadius.circular(20)),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(20), // Image border
@@ -1191,7 +1196,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                                   width: 190,
                                   height: 190,
                                   child: Container(
-                                    padding: EdgeInsets.all(2), // Border width
+                                    padding: const EdgeInsets.all(2), // Border width
                                     decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip3), borderRadius: BorderRadius.circular(20)),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(20), // Image border
@@ -1226,7 +1231,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                                   width: 190,
                                   height: 190,
                                   child: Container(
-                                    padding: EdgeInsets.all(2), // Border width
+                                    padding: const EdgeInsets.all(2), // Border width
                                     decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip4), borderRadius: BorderRadius.circular(20)),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(20), // Image border
@@ -1403,7 +1408,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                                     width: 190,
                                     height: 190,
                                     child: Container(
-                                      padding: EdgeInsets.all(2), // Border width
+                                      padding: const EdgeInsets.all(2), // Border width
                                       decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip1), borderRadius: BorderRadius.circular(20)),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(20), // Image border
@@ -1438,7 +1443,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                                     width: 190,
                                     height: 190,
                                     child: Container(
-                                      padding: EdgeInsets.all(2), // Border width
+                                      padding: const EdgeInsets.all(2), // Border width
                                       decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip2), borderRadius: BorderRadius.circular(20)),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(20), // Image border
@@ -1473,7 +1478,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                                     width: 190,
                                     height: 190,
                                     child: Container(
-                                      padding: EdgeInsets.all(2), // Border width
+                                      padding: const EdgeInsets.all(2), // Border width
                                       decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip3), borderRadius: BorderRadius.circular(20)),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(20), // Image border
@@ -1508,7 +1513,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                                     width: 190,
                                     height: 190,
                                     child: Container(
-                                      padding: EdgeInsets.all(2), // Border width
+                                      padding: const EdgeInsets.all(2), // Border width
                                       decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip4), borderRadius: BorderRadius.circular(20)),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(20), // Image border
@@ -1543,7 +1548,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                                     width: 190,
                                     height: 190,
                                     child: Container(
-                                      padding: EdgeInsets.all(2), // Border width
+                                      padding: const EdgeInsets.all(2), // Border width
                                       decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip5), borderRadius: BorderRadius.circular(20)),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(20), // Image border
@@ -1578,7 +1583,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                                     width: 190,
                                     height: 190,
                                     child: Container(
-                                      padding: EdgeInsets.all(2), // Border width
+                                      padding: const EdgeInsets.all(2), // Border width
                                       decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip6), borderRadius: BorderRadius.circular(20)),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(20), // Image border
@@ -1613,7 +1618,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                                     width: 190,
                                     height: 190,
                                     child: Container(
-                                      padding: EdgeInsets.all(2), // Border width
+                                      padding: const EdgeInsets.all(2), // Border width
                                       decoration: BoxDecoration(color: Colors.blue.withOpacity(valueEquip7), borderRadius: BorderRadius.circular(20)),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(20), // Image border
@@ -1653,7 +1658,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                       Visibility(
                         visible: _isVisibleWeightRepsText,
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 50.0),
+                          padding: const EdgeInsets.only(left: 37.0),
                           child: Container(
                             width: 120,
                               child: TextField(
@@ -2183,7 +2188,7 @@ class _WorkoutPageState extends State<WorkoutPage>  {
                           var _data = ModelList();
                           _data.equipment = Mequipment;
                           _data.weight = 0;
-                          _data.reps = repsValue;
+                          _data.reps = onlyRepsValue;
                           _data.date = nowDate;
                           var result = await _dataService.SaveData(_data);
                           print(result);
@@ -2264,7 +2269,11 @@ class _WorkoutPageState extends State<WorkoutPage>  {
               heroTag: null,
               backgroundColor: BG,
               child: const Icon(Icons.bar_chart),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const ProgressPage(title: 'Progress',);
+                }));
+              },
             ),
           ],
         ),
@@ -2299,6 +2308,7 @@ class _ListPageState extends State<ListPage> {
         _dataList.add(dataModel);
       });
     });
+
   }
 
   @override
@@ -2330,8 +2340,6 @@ class _ListPageState extends State<ListPage> {
                         getAllData();
                       }
                     });
-
-
                   },
                   child: const Text('Delete')),
               TextButton(
@@ -2426,7 +2434,7 @@ class _ListPageState extends State<ListPage> {
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       children: [
                                         Padding(
-                                          padding: EdgeInsets.only(right: 80.0),
+                                          padding: const EdgeInsets.only(right: 80.0),
                                           child: Text(
                                             "Weight : " + _dataList[index].weight.toString() + " Kgs",
                                             style: TextStyle(
@@ -2451,7 +2459,7 @@ class _ListPageState extends State<ListPage> {
                                   width: double.infinity,
                                   height: 285,
                                   child: ClipRRect(
-                                    borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)), // Image border
+                                    borderRadius: const BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)), // Image border
                                     child: SizedBox.fromSize(
                                       size: const Size.fromRadius(48), // Image radius
                                       child: Image.asset(
@@ -2528,7 +2536,11 @@ class _ListPageState extends State<ListPage> {
               heroTag: null,
               backgroundColor: BG,
               child: const Icon(Icons.bar_chart),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const ProgressPage(title: 'Progress',);
+                }));
+              },
             ),
           ],
         ),
@@ -2536,14 +2548,195 @@ class _ListPageState extends State<ListPage> {
     );
   }
 
-
 }
 
-class ProgressPage extends StatelessWidget {
-  const ProgressPage({Key? key}) : super(key: key);
+class ProgressPage extends StatefulWidget {
+    const ProgressPage({super.key, required String title});
+
+    @override
+    State<ProgressPage> createState() => _ProgressPageState();
+
+  }
+
+class _ProgressPageState extends State<ProgressPage> {
+
+
+
+
+  late List<ModelList> _dataList;
+  final _dataService = DataService();
+
+  getAllData() async {
+    _dataList=<ModelList>[];
+    var totData = await _dataService.readAllData();
+    totData.forEach((data){
+      setState(() {
+        var dataModel = ModelList();
+        dataModel.id = data["id"];
+        dataModel.equipment = data["equipment"];
+        dataModel.weight = data["weight"];
+        dataModel.reps = data["reps"];
+        dataModel.date = data["date"];
+        _dataList.add(dataModel);
+      });
+    });
+
+  }
+
+
+  @override
+  void initState() {
+    getAllData();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+
+
+    return SafeArea(
+      child: Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          //backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          backgroundColor: B.withOpacity(0.5),
+          title: Center(
+              child: Text(
+                "Progress",
+                style: TextStyle(
+                    fontFamily: "Hanuman",
+                    fontSize: 30,
+                    color: BG
+                ),
+              )
+          ),
+        ),
+        body: Stack(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage(q44),
+                        fit: BoxFit.cover
+                    )
+                ),
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: Container(
+                  width: double.infinity,
+                  height: 560,
+                  child: LineChart(
+                    LineChartData(
+                      minX: 0,
+                      maxX: 11,
+                      minY: 0,
+                      maxY: 6,
+                      gridData: FlGridData(
+                        show: true,
+                        getDrawingHorizontalLine: (value) {
+                          return FlLine(
+                            color: B,
+                            strokeWidth: 1
+                          );
+                        },
+                      ),
+                      borderData: FlBorderData(
+                        show: true,
+                        border: Border.all(color: B,width: 1),
+                      ),
+                      lineBarsData: [
+                        LineChartBarData(
+                          spots: [
+                            const FlSpot(0, 1),
+                            const FlSpot(2.6, 1.3),
+                            const FlSpot(4.9, 3),
+                            const FlSpot(6.8, 1.5),
+                            const FlSpot(8, 2),
+                            const FlSpot(9.5, 1.5),
+                            const FlSpot(11, 2),
+                          ],
+                          isCurved: true,
+                          color: BG,
+                          barWidth: 5,
+                          dotData: const FlDotData(show: false),
+                          belowBarData: BarAreaData(
+                            show: true,
+                            color: BG.withAlpha(50)
+                          ),
+                        )
+                      ]
+                    ),
+
+                  ),
+                ),
+              )
+            ]
+        ),
+
+        floatingActionButtonLocation: ExpandableFab.location,
+        floatingActionButton: ExpandableFab(
+          expandedFabShape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30)
+          ),
+          collapsedFabShape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30)),
+          fanAngle: 90,
+          overlayStyle: ExpandableFabOverlayStyle(
+            // color: Colors.black.withOpacity(0.5),
+            blur: 5,
+          ),
+          child: const Icon(
+            Icons.menu,
+            size: 30,
+          ),
+          backgroundColor: BG,
+          closeButtonStyle:  ExpandableFabCloseButtonStyle(backgroundColor: BG),
+          children: [
+            FloatingActionButton.small(
+              heroTag: null,
+              backgroundColor: BG,
+              child: Icon(realHomeIcon),
+              onPressed: () {
+                setState(() {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const MyHomePage(title: 'Home',);
+                  }));
+                });
+              },
+            ),
+            FloatingActionButton.small(
+              heroTag: null,
+              backgroundColor: BG,
+              child: const Icon(Icons.list),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const ListPage(title: "List");
+                }));
+              },
+            ),
+            FloatingActionButton.small(
+              heroTag: null,
+              backgroundColor: BG,
+              child: const Icon(Icons.fitness_center),
+              onPressed: () {
+                _isVisibleBodyPart = true;
+                _isVisibleEquipment = false;
+                _isVisibleWeight = false;
+                _isVisibleNextBtn2 = false;
+                _isVisibleNextBtn3 = false;
+                _isVisibleNextBtn1 = true;
+                trigger = false;
+                workoutMainText = "Body Part";
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const WorkoutPage();
+                }));
+              },
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
